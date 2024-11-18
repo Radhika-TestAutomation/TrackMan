@@ -59,7 +59,7 @@ public class PlannedRoundCreatorTest extends BaseTest {
         if (notificationPopupDenyButton != null) {
             notificationPopupDenyButton.click();
         } else {
-            LOGGER.warning("Notification popup deny button not found. Continuing without clicking.");
+            LOGGER.severe("Notification popup deny button not found. Continuing without clicking.");
         }
     }
 
@@ -75,7 +75,8 @@ public class PlannedRoundCreatorTest extends BaseTest {
         if (imageViewCloseButton != null) {
             imageViewCloseButton.click();
         } else {
-            LOGGER.warning("Close Image View button not found. Continuing without closing.");
+            LOGGER.severe("Close Image View button not found. Continuing without closing.");
+            throw new NoSuchElementException("Close Image View Button not found");
         }
     }
 
@@ -122,7 +123,8 @@ public class PlannedRoundCreatorTest extends BaseTest {
 
             }
         else {
-            LOGGER.warning("Close Image Button not found. Continuing without closing.");
+            LOGGER.severe("Close Image Button not found. Continuing without closing.");
+            throw new NoSuchElementException("Close Image Button not found");
         }
 
     }
